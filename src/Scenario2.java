@@ -8,12 +8,13 @@ import java.awt.event.WindowAdapter;
  *
  * @author 344813928
  */
-public class Scenario1 extends javax.swing.JFrame {
-    EthicsCase cases = MainMenu.cases[0]; // scenario number to match scenario frame
+public class Scenario2 extends javax.swing.JFrame {
+    EthicsCase cases = MainMenu.cases[1]; // scenario number to match scenario frame
+
     /**
      * Creates new form Scenario1
      */
-    public Scenario1() {
+    public Scenario2() {
         initComponents();
         
         addWindowListener(new WindowAdapter() {
@@ -56,7 +57,7 @@ public class Scenario1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ScenarioHeader.setText("Scenario #1");
+        ScenarioHeader.setText("Scenario #2");
 
         ScenarioName.setText("scene");
 
@@ -161,7 +162,7 @@ public class Scenario1 extends javax.swing.JFrame {
         }
         cases.verdict.setStudentVerdict(verd); // update verdict for this case
         
-        new Scenario2().setVisible(true); // open next scenario frame
+        new Scenario3().setVisible(true); // open next scenario frame
         this.setVisible(false);
     }//GEN-LAST:event_SubmitButtonActionPerformed
 

@@ -100,7 +100,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="ScenarioHeader">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Scenario #1"/>
+        <Property name="text" type="java.lang.String" value="Scenario #3"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="ScenarioName">
