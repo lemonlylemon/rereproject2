@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+import java.io.File;
+import java.util.Scanner;
+import java.io.IOException;
 /**
  *
  * @author 345954069
@@ -15,30 +17,30 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
-        cases[0] = new PrivacyCase(
-        "The Always-On Microphone", 
-        "A smart speaker conmpany recorded household conversations even when " + 
-        "the device was not activated. Employees reviewed the recordings.",
-        "audio recordings"
-        );
         
-        cases[1] = new AlgorithmCase(
-        "The Biased Hiring Bot",
-        "A tech company's AI screening tool ranked male applicants higher than " +
-        "equally qualified female applicants.",
-        "gender bias");
-        
-        cases[2] = new MisinformationCase(
-        "The deepfake Politician",
-        "A deepfake video of a candidate saying they never said spread widely " +
-        "online during an election before being identified as fake.",
-        "deepfake video");
-        
-        cases[3] = new IntellectualPropertyCase(
-        "AI Trained on Artist Work",
-        "An AI image generator was trained on millions of artworks scraped " +
-        "without permission. Artists receive no credit or payment.",
-        "AI-generated art");
+        try {
+            Scanner fileInput = new Scanner(new File("CaseDatabase.txt"));
+            int caseIndex = 0; // index of each case
+            while (fileInput.hasNext()) { // read each line from file
+                String output = fileInput.nextLine();
+                String [] info = output.split(";");
+                
+                if (info[1].equals("PrivacyCase")) {
+                    cases[caseIndex] = new PrivacyCase(info[0], info[3], info[2]);
+                } else if (info[1].equals("AlgorithmCase")) {
+                    cases[caseIndex] = new AlgorithmCase(info[0], info[3], info[2]);
+                } else if (info[1].equals("MisinformationCase")) {
+                    cases[caseIndex] = new MisinformationCase(info[0], info[3], info[2]);
+                } else if (info[1].equals("IntellectualPropertyCase")) {
+                    cases[caseIndex] = new IntellectualPropertyCase(info[0], info[3], info[2]);
+                }
+                
+                caseIndex++;
+                fileInput.close();
+            }
+        } catch ( IOException ioException ) {
+            System.err.println("Java Exception: " + ioException);
+        }
     }
 
     /**
