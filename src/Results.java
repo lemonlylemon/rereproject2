@@ -1,7 +1,8 @@
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
-
-
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.FileWriter;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -28,11 +29,26 @@ public class Results extends javax.swing.JFrame {
             String profileName = "";
             String profileDescription = "";
             
-            for (int i = 0; i<8; i++) { 
-                if (MainMenu.cases[i].verdict.getStudentVerdict().equals("Ethical")) {
-                       numEthical++;
+            try { // clear verdict text file to prepare for new verdict info
+                FileWriter fw = new FileWriter("src/VerdictDatabase.txt", false);
+            } catch (IOException ioException) {
+                System.err.println("Java Exception: " + ioException);
+            }
+            
+            for (int i = 0; i<4; i++) { 
+                Verdict verdict = MainMenu.cases[i].verdict;
+                if (verdict.getStudentVerdict().equals("Ethical")) { // check which button user selected
+                    numEthical++;
                 } else {
                     numUnethical++;
+                }
+                try { // write each verdict info into text file
+                    FileWriter w = new FileWriter("src/VerdictDatabase.txt", true);
+                    PrintWriter output = new PrintWriter(w);
+                    output.println(verdict.getCaseTitle() + ";" + verdict.getStudentVerdict() + ";" + verdict.getReason());
+                    output.close();
+                } catch (IOException ioException) {
+                    System.err.println("Java Exception: " + ioException);
                 }
             }
             
@@ -91,7 +107,9 @@ public class Results extends javax.swing.JFrame {
         jLabel5.setText("UNETHICAL");
 
         profile.setColumns(20);
+        profile.setLineWrap(true);
         profile.setRows(5);
+        profile.setWrapStyleWord(true);
         jScrollPane1.setViewportView(profile);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -66,7 +66,9 @@ public class Scenario4 extends javax.swing.JFrame {
         CategoryName.setText("catalyst");
 
         DescriptionField.setColumns(20);
+        DescriptionField.setLineWrap(true);
         DescriptionField.setRows(5);
+        DescriptionField.setWrapStyleWord(true);
         jScrollPane1.setViewportView(DescriptionField);
 
         buttonGroup1.add(EthicalButton);
@@ -78,7 +80,9 @@ public class Scenario4 extends javax.swing.JFrame {
         jLabel2.setText("Reasoning:");
 
         ReasoningField.setColumns(20);
+        ReasoningField.setLineWrap(true);
         ReasoningField.setRows(5);
+        ReasoningField.setWrapStyleWord(true);
         jScrollPane2.setViewportView(ReasoningField);
 
         SubmitButton.setText("Next  >");
@@ -117,9 +121,12 @@ public class Scenario4 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(SubmitButton)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

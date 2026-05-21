@@ -1,0 +1,4 @@
+null;Ethical;cool
+null;Unethical;uncool
+null;Ethical;
+null;N/A;awesom

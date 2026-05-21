@@ -19,13 +19,13 @@ public class MainMenu extends javax.swing.JFrame {
         initComponents();
         
         try {
-            Scanner fileInput = new Scanner(new File("CaseDatabase.txt"));
+            Scanner fileInput = new Scanner(new File("src/CaseDatabase.txt"));
             int caseIndex = 0; // index of each case
             while (fileInput.hasNext()) { // read each line from file
                 String output = fileInput.nextLine();
                 String [] info = output.split(";");
                 
-                if (info[1].equals("PrivacyCase")) {
+                if (info[1].equals("PrivacyCase")) { // check which case type it is
                     cases[caseIndex] = new PrivacyCase(info[0], info[3], info[2]);
                 } else if (info[1].equals("AlgorithmCase")) {
                     cases[caseIndex] = new AlgorithmCase(info[0], info[3], info[2]);
@@ -35,9 +35,9 @@ public class MainMenu extends javax.swing.JFrame {
                     cases[caseIndex] = new IntellectualPropertyCase(info[0], info[3], info[2]);
                 }
                 
-                caseIndex++;
-                fileInput.close();
+                caseIndex++; // increment index of case being added to array
             }
+            fileInput.close();
         } catch ( IOException ioException ) {
             System.err.println("Java Exception: " + ioException);
         }
