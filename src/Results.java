@@ -35,7 +35,7 @@ public class Results extends javax.swing.JFrame {
                 System.err.println("Java Exception: " + ioException);
             }
             
-            for (int i = 0; i<4; i++) { 
+            for (int i = 0; i<8; i++) { 
                 Verdict verdict = MainMenu.cases[i].verdict;
                 if (verdict.getStudentVerdict().equals("Ethical")) { // check which button user selected
                     numEthical++;

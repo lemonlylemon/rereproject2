@@ -1,4 +1,8 @@
 The Always-On Microphone;PrivacyCase;audio recordings;A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.
 The Biased Hiring Bot;AlgorithmCase;gender bias;A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.
-The deepfake Politician;MisinformationCase;deepfake video;A deepfake video of a candidate saying they never said spread widely online during an election before being identified as fake.
+The deepfake Politician;MisinformationCase;deepfake video;A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.
 AI Trained on Artist Work;IntellectualPropertyCase;AI-generated art;An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.
+The Shared Student File;PrivacyCase;student information;A school discovered selling sensitive student information stored on their website after software update.
+The Unequal Loan Scores;AlgorithmCase;neighborhood bias;A bank's loaning algorithm gives applicants from specific neighborhoods lower scores than others regardless of credit score.
+The Fake Emergency Post;MisinformationCase;fake emergency;A viral post falsely claims a local bridge had collapsed, causing panic and unnecessary calls to emergency services.
+The Unauthorized Remix;IntellectualPropertyCase;remixed music;An artists remixes another artist's music without their permission and earns money from streams.
