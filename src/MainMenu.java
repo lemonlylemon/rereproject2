@@ -26,7 +26,7 @@ public class MainMenu extends javax.swing.JFrame {
                 String [] info = output.split(";");
                 
                 if (info[1].equals("PrivacyCase")) { // check which case type it is
-                    cases[caseIndex] = new PrivacyCase(info[0], info[3], info[2]);
+                    cases[caseIndex] = new PrivacyCase(info[0], info[3], info[2]); // then create case in cases array
                 } else if (info[1].equals("AlgorithmCase")) {
                     cases[caseIndex] = new AlgorithmCase(info[0], info[3], info[2]);
                 } else if (info[1].equals("MisinformationCase")) {

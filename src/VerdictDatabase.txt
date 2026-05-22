@@ -1,4 +1,4 @@
-null;Ethical;cool
-null;Unethical;uncool
-null;Ethical;
-null;N/A;awesom
+null;Ethical;awes
+null;Unethical;
+null;N/A;
+null;N/A;

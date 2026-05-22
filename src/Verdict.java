@@ -28,29 +28,55 @@ public class Verdict {
     }
     
     /*
+    Sets the name of this verdict's case.
     
+    @param title title of case
     */
-    
     public void setCaseName(String title) {
         this.caseTitle = title;
     }
     
+    /*
+    Gets the name of this verdict's case.
+    
+    @return caseTitle title of case
+    */
     public String getCaseTitle() {
         return caseTitle;
     }
     
+    /*
+    Sets the reason of this verdict.
+    
+    @param reason reason of the verdict
+    */
     public void setReason (String reason) {
         this.reason = reason;
     }
     
+    /*
+    Gets the reason of this verdict.
+    
+    @return reason reason of the verdict
+    */
     public String getReason(){
         return reason;
     }
     
+    /*
+    Sets the student's verdict of this verdict object.
+    
+    @param verdict student's verdict of the verdict
+    */
     public void setStudentVerdict(String verdict){
         this.studentVerdict = verdict;
     }
     
+    /*
+    Gets the student's verdict of this verdict object.
+    
+    @return studentVerdict student's verdict of the verdict
+    */
     public String getStudentVerdict() {
         return studentVerdict;
     }

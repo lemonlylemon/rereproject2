@@ -65,7 +65,9 @@ public class Scenario1 extends javax.swing.JFrame {
         CategoryName.setText("catalyst");
 
         DescriptionField.setColumns(20);
+        DescriptionField.setLineWrap(true);
         DescriptionField.setRows(5);
+        DescriptionField.setWrapStyleWord(true);
         jScrollPane1.setViewportView(DescriptionField);
 
         buttonGroup1.add(EthicalButton);
@@ -77,7 +79,9 @@ public class Scenario1 extends javax.swing.JFrame {
         jLabel2.setText("Reasoning:");
 
         ReasoningField.setColumns(20);
+        ReasoningField.setLineWrap(true);
         ReasoningField.setRows(5);
+        ReasoningField.setWrapStyleWord(true);
         jScrollPane2.setViewportView(ReasoningField);
 
         SubmitButton.setText("Next  >");
