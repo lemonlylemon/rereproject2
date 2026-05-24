@@ -12,6 +12,7 @@ public class EthicsCase {
     private String description;
     private String category;
     public Verdict verdict;
+    private static int caseCount = 0; //counts how many EthicsCase objects have been created
     
     /*
     Constructs a new EthicsCase object.
@@ -25,6 +26,7 @@ public class EthicsCase {
         this.description = description;
         this.category = category;
         verdict = new Verdict();
+        caseCount++;
     }
     
     /*
@@ -52,6 +54,17 @@ public class EthicsCase {
     */
     public String getCategory() {
         return category;
+    }
+    
+    
+    /*
+    Get the amount of cases in total
+    
+    @return the caseCount counted cases in total
+    */
+    
+    public static int getCaseCount() {
+        return caseCount;
     }
     
     /*
